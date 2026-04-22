@@ -142,15 +142,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-avatar">
-        <div className="avatar-ring">
-          <div className="orbit-dot" />
-          <div className="avatar-inner">
-            <img src="167.jpg" alt="Rohan" style={{backgroundSize:"cover", backgroundPosition:"center"}} />
-          </div>
-        </div>
-      </div>
-
+     
       <div className="scroll-indicator">
         <div className="scroll-line" />
         <span>Scroll</span>
