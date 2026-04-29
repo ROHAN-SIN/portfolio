@@ -18,21 +18,9 @@ const PROJECTS = [
     tags: ["React", "Node.js", "MongoDB"],
     name: "E-Commerce Platform",
     desc: "A full-featured online store with cart, payments, admin dashboard, and real-time inventory management.",
+    link:"https://food-commerce-blue.vercel.app/"
   },
-  {
-    emoji: "📊",
-    gradient: "linear-gradient(135deg,#0a1a30,#0a4a7a)",
-    tags: ["Next.js", "TypeScript", "Prisma"],
-    name: "Analytics Dashboard",
-    desc: "Real-time data visualization dashboard with interactive charts, custom reports, and team collaboration features.",
-  },
-  {
-    emoji: "💬",
-    gradient: "linear-gradient(135deg,#0a2a1a,#0a6a3a)",
-    tags: ["React Native", "Firebase", "WebRTC"],
-    name: "Chat Application",
-    desc: "Real-time messaging app with video calls, file sharing, end-to-end encryption, and group features.",
-  },
+ 
 ];
 
 // ── CUSTOM CURSOR ────────────────────────────────────────
@@ -222,7 +210,7 @@ function Projects() {
       <p className="section-desc reveal">A selection of projects that showcase my skills and creativity.</p>
 
       <div className="projects-grid stagger">
-        {PROJECTS.map(({ emoji, gradient, tags, name, desc }) => (
+        {PROJECTS.map(({ emoji, gradient, tags, name, desc,link }) => (
           <div className="project-card" key={name}>
             <div className="project-thumb">
               <div className="thumb-gradient" style={{ background: gradient }} />
@@ -234,7 +222,9 @@ function Projects() {
               </div>
               <div className="project-name">{name}</div>
               <div className="project-desc">{desc}</div>
-              <a href="#" className="project-link">View Project →</a>
+              <a href={link} className="project-link" target="_blank" rel="noopener noreferrer">
+                View Project →
+              </a>
             </div>
           </div>
         ))}
